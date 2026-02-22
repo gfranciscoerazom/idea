@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App;
 
 enum IdeaStatus: string
@@ -10,8 +12,6 @@ enum IdeaStatus: string
 
     /**
      * Get the human-readable label for the status.
-     *
-     * @return string
      */
     public function label(): string
     {

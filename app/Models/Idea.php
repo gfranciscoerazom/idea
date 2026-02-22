@@ -1,7 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
+use Database\Factories\IdeaFactory;
 use App\IdeaStatus;
 use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -11,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Idea extends Model
 {
-    /** @use HasFactory<\Database\Factories\IdeaFactory> */
+    /** @use HasFactory<IdeaFactory> */
     use HasFactory;
 
     /**
