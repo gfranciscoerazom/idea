@@ -43,7 +43,7 @@
                 <div class="text-foreground max-w-none cursor-pointer">{{ $idea->description }}</div>
             </x-card>
 
-            @if ($idea->steps->count)
+            @if ($idea->steps->count())
                 <div>
                     <h3 class="font-bold text-xl mt-6">Actionable Steps</h3>
 
