@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Models\Idea;
@@ -15,6 +17,7 @@ class IdeaImageController extends Controller
         $idea->update([
             'image_path' => null,
         ]);
+
         return back();
     }
 }

@@ -31,7 +31,7 @@ class SessionsController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended('/')->with('success', 'You are now logged in!');
+        return redirect()->intended(route('idea.index'))->with('success', 'You are now logged in!');
     }
 
     public function destroy(Request $request)
@@ -41,6 +41,6 @@ class SessionsController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('success', 'You have been logged out!');
+        return to_route('idea.index')->with('success', 'You have been logged out!');
     }
 }
